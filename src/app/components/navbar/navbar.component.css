@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #d1d1d1; /* Fundo escuro do cabeçalho */
+  background-color: #d1d1d1;
 }
 
 .logo-container {
@@ -32,8 +32,8 @@ header {
   padding: 8px 40px 8px 16px;
   border-radius: 20px;
   border: 1px solid #696969;
-  width: 100%; /* Permite que ocupe o espaço disponível */
-  max-width: 300px; /* Limite de largura */
+  width: 100%;
+  max-width: 300px;
   background-color: #ffffff;
   color: #333333;
 }
@@ -64,18 +64,18 @@ button {
 @media screen and (max-width: 768px) {
   header {
     padding: 16px;
-    flex-direction: column; /* Empilhar os elementos */
+    flex-direction: column;
     align-items: flex-start;
   }
 
   .search-bar {
     width: 100%;
     margin-top: 10px;
-    order: 1; /* Faz com que a barra de pesquisa fique acima do botão de login */
+    order: 1;
   }
 
   .search-bar input {
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 100%;
     max-width: 250px;
   }
 
@@ -88,15 +88,15 @@ button {
 
 @media screen and (max-width: 480px) {
   .logo {
-    height: 3rem; /* Reduz o tamanho do logo */
+    height: 3rem;
   }
 
   .search-bar input {
-    max-width: 200px; /* Reduz o tamanho máximo da barra de pesquisa */
+    max-width: 200px;
   }
 
   .login-btn {
     padding: 8px;
-    font-size: 14px; /* Ajusta o tamanho da fonte */
+    font-size: 14px;
   }
 }
