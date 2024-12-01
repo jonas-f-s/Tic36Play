@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main {
+  background-color: #ffffff;
+}
+
+
+.post {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
+.rectangles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+
+.post-rectangle {
+  width: 220px;
+  height: 120px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+.rectangle-1 { background-color: #e74c3c; }
+.rectangle-2 { background-color: #3498db; }
+.rectangle-3 { background-color: #2ecc71; }
+.rectangle-4 { background-color: #f39c12; }
+.rectangle-5 { background-color: #9b59b6; }
+.rectangle-6 { background-color: #1abc9c; }
+.rectangle-7 { background-color: #e67e22; }
+.rectangle-8 { background-color: #16a085; }
+.rectangle-9 { background-color: #f1c40f; }
+.rectangle-10 { background-color: #d35400; }
+.rectangle-11 { background-color: #c0392b; }
+.rectangle-12 { background-color: #8e44ad; }
+.rectangle-13 { background-color: #27ae60; }
+.rectangle-14 { background-color: #2980b9; }
+.rectangle-15 { background-color: #34495e; }
+.rectangle-16 { background-color: #f39c12; }
+.rectangle-17 { background-color: #9b59b6; }
+.rectangle-18 { background-color: #1abc9c; }
+.rectangle-19 { background-color: #e67e22; }
+.rectangle-20 { background-color: #16a085; }
+.rectangle-21 { background-color: #f1c40f; }
+.rectangle-22 { background-color: #d35400; }
+
+
+.post-rectangle {
+  width: 220px;
+  height: 120px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.post-title {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.post-meta {
+  font-size: 12px;
+  color: #2c3e50;
+  margin-top: 4px;
+}
+
+.author,
+.period {
+  display: inline-block;
+}
+
+.view-count {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-top: 8px;
+}

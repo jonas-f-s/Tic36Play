@@ -1,0 +1,496 @@
+
+
+<body>
+  <div class="post">
+    <div class="rectangles-container">
+
+      <div class="rectangle-wrapper" *ngFor="let video of videos; trackBy: trackById">
+        <a [routerLink]="['/play']"
+           [queryParams]="{ videoUrl: video.url, videoTitle: video.title, videoThumbnail: video.thumbnail }"
+           (click)="onVideoClick(video.id)">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + video.thumbnail + ')'}"></div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title" [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ video.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ video.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ video.views }}</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[1]?.url, videoTitle: videos[1]?.title }"
+          [queryParams]="{ videoUrl: videos[1]?.url, videoTitle: videos[1]?.title, videoThumbnail: videos[1]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[1]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[1]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[1]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[1]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[2]?.url, videoTitle: videos[2]?.title }"
+          [queryParams]="{ videoUrl: videos[2]?.url, videoTitle: videos[2]?.title, videoThumbnail: videos[2]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[2]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[2]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[2]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[2]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[3]?.url, videoTitle: videos[3]?.title }"
+          [queryParams]="{ videoUrl: videos[3]?.url, videoTitle: videos[0]?.title, videoThumbnail: videos[3]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[3]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[3]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[3]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[3]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[4]?.url, videoTitle: videos[4]?.title }"
+          [queryParams]="{ videoUrl: videos[4]?.url, videoTitle: videos[4]?.title, videoThumbnail: videos[4]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[4]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[4]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[4]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[4]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[5]?.url, videoTitle: videos[5]?.title }"
+          [queryParams]="{ videoUrl: videos[5]?.url, videoTitle: videos[5]?.title, videoThumbnail: videos[5]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[5]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[5]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[5]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[5]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[6]?.url, videoTitle: videos[6]?.title }"
+          [queryParams]="{ videoUrl: videos[6]?.url, videoTitle: videos[6]?.title, videoThumbnail: videos[6]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[6]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[6]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[6]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[6]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[7]?.url, videoTitle: videos[7]?.title }"
+          [queryParams]="{ videoUrl: videos[7]?.url, videoTitle: videos[7]?.title, videoThumbnail: videos[7]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[7]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[7]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[7]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[7]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[8]?.url, videoTitle: videos[8]?.title }"
+          [queryParams]="{ videoUrl: videos[8]?.url, videoTitle: videos[8]?.title, videoThumbnail: videos[8]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[8]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[8]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[8]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[8]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[9]?.url, videoTitle: videos[9]?.title }"
+          [queryParams]="{ videoUrl: videos[9]?.url, videoTitle: videos[9]?.title, videoThumbnail: videos[9]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[9]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[9]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[9]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[9]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[10]?.url, videoTitle: videos[10]?.title }"
+          [queryParams]="{ videoUrl: videos[10]?.url, videoTitle: videos[10]?.title, videoThumbnail: videos[10]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[10]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[10]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[10]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[10]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[11]?.url, videoTitle: videos[11]?.title }"
+          [queryParams]="{ videoUrl: videos[11]?.url, videoTitle: videos[11]?.title, videoThumbnail: videos[11]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[11]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[11]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[11]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[11]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[12]?.url, videoTitle: videos[12]?.title }"
+          [queryParams]="{ videoUrl: videos[12]?.url, videoTitle: videos[12]?.title, videoThumbnail: videos[12]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[12]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[12]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[12]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[12]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[13]?.url, videoTitle: videos[13]?.title }"
+          [queryParams]="{ videoUrl: videos[13]?.url, videoTitle: videos[13]?.title, videoThumbnail: videos[13]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[13]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[13]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[13]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[13]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[14]?.url, videoTitle: videos[14]?.title }"
+          [queryParams]="{ videoUrl: videos[14]?.url, videoTitle: videos[14]?.title, videoThumbnail: videos[14]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[14]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[14]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[14]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[14]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[15]?.url, videoTitle: videos[15]?.title }"
+          [queryParams]="{ videoUrl: videos[15]?.url, videoTitle: videos[15]?.title, videoThumbnail: videos[15]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[15]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[15]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[15]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[15]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[16]?.url, videoTitle: videos[16]?.title }"
+          [queryParams]="{ videoUrl: videos[16]?.url, videoTitle: videos[16]?.title, videoThumbnail: videos[16]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[16]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[16]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[16]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[16]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[17]?.url, videoTitle: videos[17]?.title }"
+          [queryParams]="{ videoUrl: videos[17]?.url, videoTitle: videos[17]?.title, videoThumbnail: videos[17]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[17]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[17]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[17]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[17]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[18]?.url, videoTitle: videos[18]?.title }"
+          [queryParams]="{ videoUrl: videos[18]?.url, videoTitle: videos[18]?.title, videoThumbnail: videos[18]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[18]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[18]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[18]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[18]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[19]?.url, videoTitle: videos[19]?.title }"
+          [queryParams]="{ videoUrl: videos[19]?.url, videoTitle: videos[19]?.title, videoThumbnail: videos[19]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[19]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[19]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[19]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[19]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[20]?.url, videoTitle: videos[20]?.title }"
+          [queryParams]="{ videoUrl: videos[20]?.url, videoTitle: videos[20]?.title, videoThumbnail: videos[20]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[20]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[20]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[20]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[20]?.views }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-wrapper">
+        <a [routerLink]="['/play']" [queryParams]="{ videoUrl: videos[21]?.url, videoTitle: videos[21]?.title }"
+          [queryParams]="{ videoUrl: videos[21]?.url, videoTitle: videos[21]?.title, videoThumbnail: videos[21]?.thumbnail }">
+          <div class="post-rectangle rectangle-1" [ngStyle]="{'background-image': 'url(' + videos[21]?.thumbnail + ')'}">
+          </div>
+        </a>
+        <div class="rectangle-info">
+          <div class="post-title"
+            [ngStyle]="{'white-space': 'normal', 'word-wrap': 'break-word', 'max-width': '210px'}">
+            <p>{{ videos[21]?.title }}</p>
+          </div>
+          <div class="post-meta">
+            <div class="period">
+              <p>{{ videos[21]?.uploadedAt | date: 'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="view-count">
+            <p>Visualizações: {{ videos[21]?.views }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

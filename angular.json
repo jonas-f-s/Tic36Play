@@ -65,7 +65,11 @@
             "development": {
               "browserTarget": "tic36Play:build:development"
             }
+
+
+
           },
+
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -94,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "740f9726-a155-41b3-9814-b222c57f6ef1"
   }
 }

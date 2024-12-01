@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d1d1d1; /* Fundo escuro do cabeçalho */
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  height: 4rem;
+  object-fit: contain;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 2;
+}
+
+.search-bar input {
+  padding: 8px 40px 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #696969;
+  width: 100%; /* Permite que ocupe o espaço disponível */
+  max-width: 300px; /* Limite de largura */
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.search {
+  padding: 6px 16px;
+  border-radius: 20px;
+  background-color: #0D00FE;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.login-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #0D00FE;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 16px;
+    flex-direction: column; /* Empilhar os elementos */
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+    order: 1; /* Faz com que a barra de pesquisa fique acima do botão de login */
+  }
+
+  .search-bar input {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 250px;
+  }
+
+  .login-btn {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    height: 3rem; /* Reduz o tamanho do logo */
+  }
+
+  .search-bar input {
+    max-width: 200px; /* Reduz o tamanho máximo da barra de pesquisa */
+  }
+
+  .login-btn {
+    padding: 8px;
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+  }
+}
